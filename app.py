@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("📊 Análise de Tipos de Carros por Marca")
+st.title("📊 Analise Exploratória de dados - vendas de Veiculos")
 
 # ==========================================================
 # 1) PREPARAÇÃO DOS DADOS
@@ -37,7 +37,7 @@ color_map = {
 # 2) MULTISELECT PARA O USUÁRIO ESCOLHER QUIS TYPES VER
 # ==========================================================
 
-st.subheader("🎨 Escolha os tipos de veículos para exibir")
+st.subheader("Selecione os tipos de veículos para exibir")
 
 selected_types = st.multiselect(
     "Selecione os tipos:",
@@ -117,8 +117,8 @@ top_brands = brand_mean_price.head(top_n)
 # Gráfico
 fig_bar = px.bar(
     top_brands,
-    x="price",
-    y="brand",
+    x="Preço",
+    y="Marca",
     orientation="h",
     text=top_brands["price"].round(0),
     height=500
