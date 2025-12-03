@@ -117,8 +117,8 @@ top_brands = brand_mean_price.head(top_n)
 # Gráfico
 fig_bar = px.bar(
     top_brands,
-    x="Preço",
-    y="Marca",
+    x="price",
+    y="brand",
     orientation="h",
     text=top_brands["price"].round(0),
     height=500
