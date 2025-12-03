@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 st.title("📊 Análise exploratória de dados - Vendas de Veiculos")
-
+car_data = pd.read_csv("vehicles.csv")
 # ==========================================================
 # 1) PREPARAÇÃO DOS DADOS
 # ==========================================================
